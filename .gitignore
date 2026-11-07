@@ -6,6 +6,7 @@ doc/
 output/
 plot/
 .vagrant/
+wasm-bin/
 .DS_Store
 bazel-*
 _bazel_*
