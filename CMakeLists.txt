@@ -19,3 +19,12 @@ fcpp_target(./run/spreading_collection_mpi.cpp      OFF)
 fcpp_target(./run/spreading_collection_run.cpp      OFF)
 
 fcpp_test(./test/tester.cpp)
+
+# just for emscripten test (temporary) 
+if(EMSCRIPTEN)
+    set_target_properties(spreading_collection_gui PROPERTIES SUFFIX ".html")
+    add_custom_command(TARGET spreading_collection_gui POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy
+            "$<TARGET_FILE:fcpp>"
+            "$<TARGET_FILE_DIR:spreading_collection_gui>/")
+endif()
