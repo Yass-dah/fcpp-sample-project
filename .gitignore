@@ -10,3 +10,4 @@ wasm-bin/
 .DS_Store
 bazel-*
 _bazel_*
+server.py

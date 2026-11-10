@@ -9,7 +9,7 @@ fcpp/src/make.sh "$@"
 
 # emscripten
 echo "Emscripten Build configuration"
-emcmake cmake -S ./ -B ./wasm-bin -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug -DFCPP_BUILD_GL=ON -DCMAKE_CXX_FLAGS=-O3
+emcmake cmake -S ./ -B ./wasm-bin -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DFCPP_BUILD_GL=ON -DCMAKE_CXX_FLAGS=-O3
 echo "Emscripten compilation"
 cmake --build ./wasm-bin/ -j 12 --target spreading_collection_gui
 

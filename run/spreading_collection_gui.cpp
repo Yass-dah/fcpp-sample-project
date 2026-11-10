@@ -26,7 +26,7 @@ void loop() {
             "fcpp.png",
             25,
             2000,
-            1000,
+            300,
             10
             )};
         network_ptr = &network;
