@@ -21,7 +21,7 @@ using aggregator_t = aggregators<in_channel, aggregator::mean<double>>;
 using plot_t = plot::split<plot::time, plot::values<aggregator_t, common::type_sequence<>, in_channel>>;
 
 DECLARE_OPTIONS(opt,
-    parallel<true>,
+    parallel<false>,
     synchronised<false>,
     program<coordination::main>,
     exports<coordination::main_t>,

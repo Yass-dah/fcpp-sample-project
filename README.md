@@ -166,3 +166,37 @@ Executing a graphical simulation will open a window displaying the simulation sc
 - any other key will show/hide a legenda displaying this list
 
 Hovering on a node will also display its UID in the top-left corner.
+
+## Wasm generation & web displaying
+
+To compile the simulation as wasm code and have a Web browser rendering page of fcpp with WebGL you need to install [Emscripten](https://emscripten.org/) and make sure to have git.
+
+<hr/>
+
+### Unix:
+```
+git clone https://github.com/emscripten-core/emsdk.git
+cd emsdk
+git pull
+./emsdk install latest
+./emsdk activate latest
+```
+and set the environment var:
+```
+source (RELATIVE_PATH)/emsdk/emsdk_env.sh
+```
+
+<hr/>
+
+### Win:
+```
+git clone https://github.com/emscripten-core/emsdk.git
+cd emsdk
+git pull
+emsdk.bat install latest
+emsdk.bat activate latest
+```
+and set the environment var:
+```
+(RELATIVE_PATH)/emsdk/emsdk_env.bat
+```
