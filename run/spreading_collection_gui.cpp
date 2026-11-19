@@ -19,7 +19,6 @@ int main() {
         1000,
         10
         )};
-        network.run();
-
+    network.run();
     return 0;
 }
